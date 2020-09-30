@@ -1,13 +1,15 @@
 #!/usr/local/bin/python
 # -*- coding: utf-8 -*-
 import os
-os.environ['SCRAPERWIKI_DATABASE_NAME'] = 'sqlite:///data.sqlite'
-import scraperwiki
 import csv
 import shutil
 from datetime import datetime
 
 import pandas as pd
+
+
+os.environ['SCRAPERWIKI_DATABASE_NAME'] = 'sqlite:///data.sqlite'
+import scraperwiki
 
 import utils
 
