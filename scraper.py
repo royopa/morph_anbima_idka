@@ -3,7 +3,7 @@
 import csv
 import os
 from datetime import datetime
-impport shutil
+import shutil
 import pandas as pd
 import scraperwiki
 
