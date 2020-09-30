@@ -9,7 +9,6 @@ import scraperwiki
 
 import utils
 
-
 def download_file(url, dt_referencia, file_name):
     # verifica se o arquivo deve ser baixado
     if not utils.check_download(dt_referencia, file_name):
@@ -122,6 +121,7 @@ def import_files(folder_name, path_file_base, ultima_data_base):
 
 
 def main():
+    os.environ['SCRAPERWIKI_DATABASE_NAME'] = 'sqlite:///data.sqlite'
     utils.prepare_download_folder('bases')
     path_file_base = os.path.join('bases', 'idka_base.csv')
 
@@ -147,6 +147,7 @@ def main():
 
 
 if __name__ == '__main__':
+    os.environ['SCRAPERWIKI_DATABASE_NAME'] = 'sqlite:///data.sqlite'
     main()
     print('Importação realizada com sucesso')
     # rename file
