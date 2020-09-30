@@ -3,7 +3,7 @@
 import csv
 import os
 from datetime import datetime
-
+impport shutil
 import pandas as pd
 import scraperwiki
 
@@ -149,3 +149,8 @@ def main():
 if __name__ == '__main__':
     main()
     print('Importação realizada com sucesso')
+    # rename file
+    print('Renomeando arquivo sqlite')
+    if os.path.exists('scraperwiki.sqlite'):
+        shutil.copy('scraperwiki.sqlite', 'data.sqlite')
+    
