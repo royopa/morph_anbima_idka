@@ -2,12 +2,14 @@
 # -*- coding: utf-8 -*-
 import csv
 import os
-from datetime import datetime
 import shutil
+from datetime import datetime
+
 import pandas as pd
 import scraperwiki
 
 import utils
+
 
 def download_file(url, dt_referencia, file_name):
     # verifica se o arquivo deve ser baixado
@@ -154,4 +156,3 @@ if __name__ == '__main__':
     print('Renomeando arquivo sqlite')
     if os.path.exists('scraperwiki.sqlite'):
         shutil.copy('scraperwiki.sqlite', 'data.sqlite')
-    
