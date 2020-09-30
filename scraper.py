@@ -6,6 +6,8 @@ import shutil
 from datetime import datetime
 
 import pandas as pd
+
+os.environ['SCRAPERWIKI_DATABASE_NAME'] = 'sqlite:///data.sqlite'
 import scraperwiki
 
 import utils
